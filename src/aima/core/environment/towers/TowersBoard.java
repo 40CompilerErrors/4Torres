@@ -198,6 +198,14 @@ public class TowersBoard {
 
 	public boolean canMoveTower(int tower, Action where) {
 	//IMPLEMENTAR: FUNCION QUE DEVUELVE VERDADERO SI EL MOVIMIENTO "where" PARA LA TORRE "tower" ES POSIBLE. DEVUELVE FALSO EOC.
+		int absPos = getPositionOf(tower);
+		int x = getXCoord(absPos);
+		int y = getYCoord(absPos);
+		
+		return !(((x - 1 < 0) || (getValueAt(x - 1,y)>0)) && 
+				((x + 1 > 7) || (getValueAt(x + 1, y)>0)) &&
+				((y - 1 < 0) || (getValueAt(x, y - 1)>0)) && 
+				((y + 1 > 7) || (getValueAt(x, y + 1)>0)));
 	}
 
 	@Override
