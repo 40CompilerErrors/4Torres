@@ -11,9 +11,28 @@ import aima.core.util.datastructure.XYLocation;
 
 public class TowersBoard {
 
+	//Acciones Torre 1
 	public static Action LEFT_1 = new DynamicAction("Tower_One_Left");
-	/// AÑADIR EL RESTO DE ACCIONES POSIBLES ////
-
+	public static Action RIGHT_1 = new DynamicAction("Tower_One_Right");
+	public static Action UP_1 = new DynamicAction("Tower_One_Up");
+	public static Action DOWN_1 = new DynamicAction("Tower_One_Down");
+	
+	//Acciones Torre 2
+	public static Action LEFT_2 = new DynamicAction("Tower_Two_Left");
+	public static Action RIGHT_2 = new DynamicAction("Tower_Two_Right");
+	public static Action UP_2 = new DynamicAction("Tower_Two_Up");
+	public static Action DOWN_2 = new DynamicAction("Tower_Two_Down");
+	
+	//Acciones Torre 3
+	public static Action LEFT_3 = new DynamicAction("Tower_Three_Left");
+	public static Action RIGHT_3 = new DynamicAction("Tower_Three_Right");
+	public static Action UP_3 = new DynamicAction("Tower_Three_Up");
+	public static Action DOWN_3 = new DynamicAction("Tower_Three_Down");
+	
+	//Acciones Torre 4
+	public static Action LEFT_4 = new DynamicAction("Tower_Four_Left");
+	public static Action RIGHT_4 = new DynamicAction("Tower_Four_Right");
+	public static Action UP_4 = new DynamicAction("Tower_Four_Up");
 	public static Action DOWN_4 = new DynamicAction("Tower_Four_Down");
 
 	private int[] state;
