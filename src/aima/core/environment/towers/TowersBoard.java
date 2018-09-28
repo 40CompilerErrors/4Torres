@@ -91,7 +91,9 @@ public class TowersBoard {
 		int count = 1;
 		int valueOnRight = -1;
 
+		//Si no esta ya al borde
 		if (!(y == 7)) {
+			//Mientras no encuentra un hueco.
 			while (!found && (y + count <= 7)) {
 				valueOnRight = getValueAt(x, y + count);
 				if (valueOnRight == 1 || valueOnRight == 2 || valueOnRight == 3 || valueOnRight == 4) {
@@ -105,15 +107,72 @@ public class TowersBoard {
 	}
 
 	public void moveTowerLeft(int tower) {
-	/// IMPLEMENTAR MOVER TORRE A LA IZQUIERDA (VER EJEMPLO DE MOVIMIENTO DERECHA)
+		int absPos = getPositionOf(tower);
+		int x = getXCoord(absPos);
+		int y = getYCoord(absPos);
+		boolean found = false;
+		int count = 1;
+		int valueOnRight = -1;
+
+		//Si no esta ya al borde
+		if (!(y == 0)) {
+			//Mientras no encuentra un hueco.
+			while (!found && (y - count >= 0)) {
+				valueOnRight = getValueAt(x, y - count);
+				if (valueOnRight == 1 || valueOnRight == 2 || valueOnRight == 3 || valueOnRight == 4) {
+					found = true;
+				} else count++;
+		    }
+			if (found || (y - count + 1 == 0 && getValueAt(x, y - count + 1) == 0)) {
+				moveValue(x, y, x, y - count + 1, tower);
+			}
+		}
 	}
 
 	public void moveTowerDown(int tower) {
-	/// IMPLEMENTAR MOVER TORRE ABAJO (VER EJEMPLO DE MOVIMIENTO DERECHA)
+		int absPos = getPositionOf(tower);
+		int x = getXCoord(absPos);
+		int y = getYCoord(absPos);
+		boolean found = false;
+		int count = 1;
+		int valueOnDown = -1;
+
+		//Si no esta ya al borde
+		if (!(x == 7)) {
+			//Mientras no encuentra un hueco.
+			while (!found && (x + count <= 7)) {
+				valueOnDown = getValueAt(x + count, y);
+				if (valueOnDown == 1 || valueOnDown == 2 || valueOnDown == 3 || valueOnDown == 4) {
+					found = true;
+				} else count++;
+		    }
+			if (found || (x + count - 1 == 7 && getValueAt(x + count - 1, y) == 0)) {
+				moveValue(x, y, x + count - 1, y, tower);
+			}
+		}
 	}
 
 	public void moveTowerUp(int tower) {
-	/// IMPLEMENTAR MOVER TORRE ARRIBA (VER EJEMPLO DE MOVIMIENTO DERECHA)
+		int absPos = getPositionOf(tower);
+		int x = getXCoord(absPos);
+		int y = getYCoord(absPos);
+		boolean found = false;
+		int count = 1;
+		int valueOnDown = -1;
+
+		//Si no esta ya al borde
+		if (!(x == 0)) {
+			//Mientras no encuentra un hueco.
+			while (!found && (x - count >=0)) {
+				valueOnDown = getValueAt(x - count, y);
+				if (valueOnDown == 1 || valueOnDown == 2 || valueOnDown == 3 || valueOnDown == 4) {
+					found = true;
+				} else count++;
+		    }
+			if (found || (x - count + 1 == 7 && getValueAt(x - count + 1, y) == 0)) {
+				moveValue(x, y, x - count + 1, y, tower);
+			}
+		}
 	}
 
 	public List<XYLocation> getPositions() {
