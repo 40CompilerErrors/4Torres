@@ -202,10 +202,24 @@ public class TowersBoard {
 		int x = getXCoord(absPos);
 		int y = getYCoord(absPos);
 		
-		return !(((x - 1 < 0) || (getValueAt(x - 1,y)>0)) && 
-				((x + 1 > 7) || (getValueAt(x + 1, y)>0)) &&
-				((y - 1 < 0) || (getValueAt(x, y - 1)>0)) && 
-				((y + 1 > 7) || (getValueAt(x, y + 1)>0)));
+		if(where.toString().equals("Tower_One_Left") || where.toString().equals("Tower_Two_Left")||
+			where.toString().equals("Tower_Three_Left") || where.toString().equals("Tower_Four_Left")) {
+			return !(((y - 1 < 0) || (getValueAt(x, y - 1)>0)));
+		}
+		else if(where.toString().equals("Tower_One_Right") || where.toString().equals("Tower_Two_Right")||
+			where.toString().equals("Tower_Three_Right") || where.toString().equals("Tower_Four_Right")) {
+			return !(((y + 1 > 7) || (getValueAt(x, y + 1)>0)));
+		}
+		else if(where.toString().equals("Tower_One_Up") || where.toString().equals("Tower_Two_Up")||
+			where.toString().equals("Tower_Three_Up") || where.toString().equals("Tower_Four_Up")) {
+			return !(((x - 1 < 0) || (getValueAt(x - 1,y)>0)));
+		}
+		else if(where.toString().equals("Tower_One_Down") || where.toString().equals("Tower_Two_Down")||
+			where.toString().equals("Tower_Three_Down") || where.toString().equals("Tower_Four_Down")) {
+			return !(((x + 1 > 7) || (getValueAt(x + 1, y)>0)));
+		}
+		
+		return false;
 	}
 
 	@Override
