@@ -87,7 +87,6 @@ public class TowersBoard {
 
 	public void moveTowerLeft(int tower) {
 	/// IMPLEMENTAR MOVER TORRE A LA IZQUIERDA (VER EJEMPLO DE MOVIMIENTO DERECHA)
-		boolean PabloGaja = true;
 	}
 
 	public void moveTowerDown(int tower) {
