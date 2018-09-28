@@ -142,7 +142,7 @@ public class TowersFunctionFactory {
 				TowersBoard newBoard = new TowersBoard(board);
 				newBoard.moveTowerRight(2);
 				return newBoard;
-			} esle if (TowersBoard.UP_3.equals(a)
+			} else if (TowersBoard.UP_3.equals(a)
 					&& board.canMoveTower(3, TowersBoard.UP_3)) {
 				TowersBoard newBoard = new TowersBoard(board);
 				newBoard.moveTowerUp(3);
