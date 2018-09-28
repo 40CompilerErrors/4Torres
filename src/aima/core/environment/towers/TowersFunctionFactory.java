@@ -112,7 +112,77 @@ public class TowersFunctionFactory {
 				TowersBoard newBoard = new TowersBoard(board);
 				newBoard.moveTowerDown(1);
 				return newBoard;
-			} 
+			} else if (TowersBoard.LEFT_1.equals(a)
+					&& board.canMoveTower(1, TowersBoard.LEFT_1)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerLeft(1);
+				return newBoard;
+			} else if (TowersBoard.RIGHT_1.equals(a)
+					&& board.canMoveTower(1, TowersBoard.RIGHT_1)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerRight(1);
+				return newBoard;
+			} else if (TowersBoard.UP_2.equals(a)
+					&& board.canMoveTower(2, TowersBoard.UP_2)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerUp(2);
+				return newBoard;
+			} else if (TowersBoard.DOWN_2.equals(a)
+					&& board.canMoveTower(2, TowersBoard.DOWN_2)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerDown(2);
+				return newBoard;
+			} else if (TowersBoard.LEFT_2.equals(a)
+					&& board.canMoveTower(2, TowersBoard.LEFT_2)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerLeft(2);
+				return newBoard;
+			} else if (TowersBoard.RIGHT_2.equals(a)
+					&& board.canMoveTower(2, TowersBoard.RIGHT_2)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerRight(2);
+				return newBoard;
+			} esle if (TowersBoard.UP_3.equals(a)
+					&& board.canMoveTower(3, TowersBoard.UP_3)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerUp(3);
+				return newBoard;
+			} else if (TowersBoard.DOWN_3.equals(a)
+					&& board.canMoveTower(3, TowersBoard.DOWN_3)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerDown(3);
+				return newBoard;
+			} else if (TowersBoard.LEFT_3.equals(a)
+					&& board.canMoveTower(3, TowersBoard.LEFT_3)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerLeft(3);
+				return newBoard;
+			} else if (TowersBoard.RIGHT_3.equals(a)
+					&& board.canMoveTower(3, TowersBoard.RIGHT_3)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerRight(3);
+				return newBoard;
+			} else if (TowersBoard.UP_4.equals(a)
+					&& board.canMoveTower(4, TowersBoard.UP_4)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerUp(4);
+				return newBoard;
+			} else if (TowersBoard.DOWN_4.equals(a)
+					&& board.canMoveTower(4, TowersBoard.DOWN_4)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerDown(1);
+				return newBoard;
+			} else if (TowersBoard.LEFT_4.equals(a)
+					&& board.canMoveTower(4, TowersBoard.LEFT_4)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerLeft(4);
+				return newBoard;
+			} else if (TowersBoard.RIGHT_4.equals(a)
+					&& board.canMoveTower(1, TowersBoard.RIGHT_4)) {
+				TowersBoard newBoard = new TowersBoard(board);
+				newBoard.moveTowerRight(4);
+				return newBoard;
+			}
 			//...
 			//IMPLEMENTAR PARA EL RESTO DE MOVIMIENTOS
 
