@@ -93,15 +93,15 @@ public class TowersBoard {
 
 		//Si no esta ya al borde
 		if (!(y == 7)) {
-			//Mientras no encuentra un hueco.
+			//Mientras no encuentra un sitio ocupado.
 			while (!found && (y + count <= 7)) {
 				valueOnRight = getValueAt(x, y + count);
 				if (valueOnRight == 1 || valueOnRight == 2 || valueOnRight == 3 || valueOnRight == 4) {
-					found = true;
+					found = true; //Si ya hay una torre, encuentra hueco.
 				} else count++;
 		    }
 			if (found || (y + count - 1 == 7 && getValueAt(x, y + count - 1) == 0)) {
-				moveValue(x, y, x, y + count - 1, tower);
+				moveValue(x, y, x, y + count - 1, tower); //Ponerse o bien al borde o a uno menos de la torre.
 			}
 		}
 	}
