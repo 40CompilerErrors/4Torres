@@ -55,9 +55,13 @@ public class TowersApp extends SimpleAgentApp {
 	}
 
 	static {
+		addSearchAlgorithm("AStarSearch (ManhattanHeursitic)",
+				new AStarSearch(new GraphSearch(),
+						new ManhattanHeuristicFunction()));
 		addSearchAlgorithm("Greedy Best First Search (ManhattanHeursitic)",
 				new GreedyBestFirstSearch(new GraphSearch(),
 						new ManhattanHeuristicFunction()));
+		
 	}
 
 	/** Returns an <code>TowersView</code> instance. */

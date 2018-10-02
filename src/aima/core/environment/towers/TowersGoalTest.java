@@ -18,6 +18,6 @@ public class TowersGoalTest implements GoalTest {
 	return  (board.getValueAt(new XYLocation(3,4))+
 			board.getValueAt(new XYLocation(4,3))+
 			board.getValueAt(new XYLocation(3,3))+
-			board.getValueAt(new XYLocation(4,4))) == 10;
+			board.getValueAt(new XYLocation(4,4))== 10) ;
 	}
 }

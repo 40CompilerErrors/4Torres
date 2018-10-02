@@ -170,7 +170,7 @@ public class TowersFunctionFactory {
 			} else if (TowersBoard.DOWN_4.equals(a)
 					&& board.canMoveTower(4, TowersBoard.DOWN_4)) {
 				TowersBoard newBoard = new TowersBoard(board);
-				newBoard.moveTowerDown(1);
+				newBoard.moveTowerDown(4);
 				return newBoard;
 			} else if (TowersBoard.LEFT_4.equals(a)
 					&& board.canMoveTower(4, TowersBoard.LEFT_4)) {
@@ -178,16 +178,13 @@ public class TowersFunctionFactory {
 				newBoard.moveTowerLeft(4);
 				return newBoard;
 			} else if (TowersBoard.RIGHT_4.equals(a)
-					&& board.canMoveTower(1, TowersBoard.RIGHT_4)) {
+					&& board.canMoveTower(4, TowersBoard.RIGHT_4)) {
 				TowersBoard newBoard = new TowersBoard(board);
 				newBoard.moveTowerRight(4);
 				return newBoard;
 			}
-			//...
-			//IMPLEMENTAR PARA EL RESTO DE MOVIMIENTOS
 
-			// The Action is not understood or is a NoOp
-			// the result will be the current state.
+
 			return s;
 		}
 	}
